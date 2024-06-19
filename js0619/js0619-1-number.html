@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>變數宣告</h2>
+    <script>
+        // 變數宣告語法
+        // 建立變數名稱的語法
+        // var 變數名稱;
+        // var=>允許同一檔案中的變數重複宣告=>不嚴謹宣告
+        // *let=>不允許同一檔案中的變數重複宣告=>嚴謹宣告
+        // Const=>一旦建立無法更改變數=>常數
+
+        // 數值變數
+        
+        let price;    //建立price變數
+        price=100;    //給值
+        let qty=10;    //建立qty變數的同時，給值
+        
+        //傳統串接方式
+        console.log('單價price:'+price+'元');
+        console.log('數量qty:'+qty+'個');
+        console.log('小計'+price*qty+'元');
+
+        //字串字面值串接資料(頭尾加上反引號)
+        //遇到變數貨運算式要加上${變數或運算式}
+        console.log(`單價:${price}元`);
+        console.log(`數量:${qty}個`);
+        console.log(`小計:${price*qty}元`);
+
+
+
+
+    </script>
+</body>
+</html>

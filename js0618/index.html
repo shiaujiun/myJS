@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJJJJJ</title>
+</head>
+
+<body>
+
+    <!-- alert():訊息視窗 -->
+    <!-- onclick => 左鍵一下的事件行為 -->
+    <!-- 所以任一個事件行為下可以直接使用js -->
+    <button onclick='alert("Hi");'>你好1</button>
+    <button onclick='javascript:alert("Hi")'>你好2</button>
+    <!-- 使用超連結時使用js語法才需前綴詞 javascript: -->
+    <a href="javascript:alert('Hi')">你好3</a>
+
+    <!-- 自行撰寫js在目前檔案中,不顯示顯示 -->
+    <script>
+        console.log("hi");
+        document.write("123"); 
+    </script>
+
+    <!-- 載入專案中的外部檔案 -->
+    <!-- 往內 -->
+    <!-- <script src="./js0618.js"></script> -->
+    <!-- 往內兩層,要有資料夾名稱-->
+    <!-- <script src="./abc/kkk/js0618.js"></script> -->
+
+    <!-- 往外 -->
+    <!-- <script src="../js0618.js"></script> -->
+    <!-- 往外兩層,不用資料夾名稱 -->
+    <!-- <script src="../../js0618.js"></script> -->
+
+    <!-- 載入模組化檔案 -->
+    <!-- <script type="module" src=""></script> -->
+
+
+</body>
+
+</html>

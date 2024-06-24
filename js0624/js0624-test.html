@@ -36,12 +36,13 @@
         } else {
             //是否分數為空白
             if (score == '') {
-                window.alert("不能空白")
+                window.alert("不能空白")    
             } else {
                 // 檢查有效範圍
                 score = Number(score);
 
                 //檢查是否為非數值的字串轉換後為NaN
+                console.log(score)
                 if (isNaN(score)) {
                     window.alert("輸入分數錯誤")
                 } else {

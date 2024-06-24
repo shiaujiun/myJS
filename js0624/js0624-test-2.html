@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //使用輸入視窗prompt
+
+        let score;
+        score = prompt('請輸入成績')
+
+        let intscore=Number(score);
+        // 檢查是否取消
+        if (intscore == null) {
+            window.alert("您按了取消");
+        } else if (intscore==''){
+            window.alert('不能空白');
+        } else if (intscore > 100 ||intscore < 0){
+            window.alert(intscore+'不適有效範圍');
+        } else if (intscore>=60){
+            window.alert('及格')
+        } else if (intscore<60){
+            window.alert('不及格');
+        } else{
+            window.alert('分數err')
+        }
+    </script>
+</body>
+
+</html>

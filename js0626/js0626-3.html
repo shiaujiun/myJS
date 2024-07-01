@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <Script>
+
+    // 彈出視窗=>prompt()
+    // 輸入運算起始值=>1
+    // 輸入運算結束值=>10
+    // 算出奇數合=>25
+    // 算出偶數合=>30
+
+let sNum=Number(prompt('起始值'));
+sNum=Number(sNum);
+let eNum=Number(prompt('結束值'));
+eNum=Number(eNum);
+
+//調換
+if (sNum>eNum){
+  let tmp=sNum;
+  sNum=eNum;
+  eNum=tmp;
+}
+
+// 奇數合
+let tot1 = 0 ;
+// 偶數合
+let tot2 = 0 ;
+
+for(let i =sNum ;i<=eNum;i++){
+  if (i % 2 === 1 ){
+    //奇數
+    tot1=tot1+i;
+  }else if (i%2=== 0){
+    //偶數
+    tot2=tot2+i;
+  }
+
+}
+console.log(`${sNum}-${eNum}的奇數合=>${tot1}`)
+console.log(`${sNum}-${eNum}的偶數合=>${tot2}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </Script>
+</body>
+</html>

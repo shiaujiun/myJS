@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 使用迴圈的前提
+    // 1.連續執行一樣程式序敘述
+    // 2.有規律性
+    // for()=>已知執行次數
+    // for(參數1;參數2;參數3)
+    // 參數1:迴圈計數器變數起始值
+    // 參數2:執行圈數的條件
+    // 參數3:每次執行迴圈後 計數器變數的增減
+
+    // ex1:顯示連續5次hello+換行
+    // document.write('hello<br>')
+    // document.write('hello<br>')
+    // document.write('hello<br>')
+    // document.write('hello<br>')
+    // document.write('hello<br>')
+    for (let i = 1; i <= 5; i++) {
+      document.write('hello<br>');
+    }
+
+
+
+    // 建立水平線=><hr>
+    document.write('<hr>');
+
+
+
+
+    // ex2:顯示數字10-15
+    // 寫法一
+    for (let i = 10; i <= 15; i++) {
+      document.write(i + ',');
+    }
+    document.write('<hr>');
+
+    // 寫法二
+    for (let i = 1; i <= 6; i++) {
+      document.write(i + 9 + ',');
+    }
+    document.write('<hr>');
+
+    // 寫法三
+    let a = 10;
+    for (let i = 1; i <= 6; i++) {
+      document.write(a + ',');
+      a++;
+    }
+    document.write('<hr>');
+
+    // 寫法四
+    let b = 10;
+    for (let i = 10; i <= 15; i++) {
+      document.write(b + ',');
+      b++;
+    }
+    document.write('<hr>');
+
+    // 使用迴圈外的變數顯示數字
+    // c++
+    // 1.先顯示
+    // 2.再加1
+    let c = 10;
+    for (let i = 1; i <= 6; i++) {
+      document.write(c++ + ",");
+    }
+    document.write('<hr>');
+
+    // 使用迴圈外的變數顯示數字
+    // ++c
+    // 1.先加1
+    // 2.再顯示
+
+    let d = 9;
+    for (let i = 1; i <= 6; i++) {
+      document.write(++d + ",");
+    }
+    document.write('<hr>');
+
+
+
+
+    // 顯示1-10的奇數 用空白隔開
+
+    for (let i = 1; i <= 10; i++) {
+      if (i % 2 === 1) {
+        document.write(i + "")
+      }
+    }
+    document.write('<hr>');
+
+    // 顯示1-10的偶數 用逗號隔開 但最後一個逗號取消
+    // %是取2的餘數
+    for (let i = 1; i <= 10; i++) {
+      if (i % 2 === 0) {
+        // 1.先顯示值
+        document.write(i);
+        if (i != 10) {
+          document.write(',')
+        }
+      }
+    }
+    document.write('<hr>');
+
+    for (let i = 1; i <= 10; i++) {
+      if (i % 2 === 0) {
+        // 1.先檢查是否為最後一個值 不是=>值+逗號
+        if (i != 10) {
+          document.write(i + ',');
+        } else {
+          // 最後一個值 不顯示逗號=>值
+          document.write(i);
+        }
+      }
+    }
+    document.write('<hr>');
+
+    // 請用一個迴圈 找出1-10中 迴圈結束後才顯示結果=>3的倍數與5的倍數
+    // 建立一個存放3的倍數的變數
+    let str3 = ''; //連續兩個單引號或雙引號 表示空字串 (連空白都沒有)
+    console.log(str3);
+    // 建立一個存放5的倍數的變數
+    let str5 = '';
+    // 寫迴圈找出3跟3倍數
+    for (let i = 1; i <= 10; i++) {
+          // 找出3倍數
+      if (i % 3 === 0) {
+        str3 = str3 + i+' '; //""+3="3" //各別保存起來 (串接)
+        // str3 + = i + ' '; <=簡化寫法
+      } else if (i % 5 === 0) {
+          // 找出5倍數
+        str5 = str5 +i+' ' ; //各別保存起來 (串接)
+      }
+    }
+    // 迴圈結束後再顯示結果
+    // 反引號中的變數要用${變數名}包起來
+    document.write(`1-10中3的倍數=>${str3}<br>`);
+    document.write(`1-10中5的倍數=>${str5}<br>`);
+    document.write("1-10中5的倍數=>"+ str5+"<br>")
+
+    //i+=2
+    //i=i+2
+
+    //i=i-2
+    //i-=2
+    
+    document.write('<hr>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // for
+    //  for
+    // let s = 0;
+    // for (let i = 1 ; i <= 10 ; i++) { s=s+i;
+    // }
+    // console.log("1+2+3+...+10="+s);
+  </script>
+</body>
+
+</html>

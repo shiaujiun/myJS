@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BINGOOOOO</title>
+</head>
+
+<body>
+  <script>
+
+    // 內定一個數字結果 => let bingoNum = 99
+    // 彈出輸入視窗，輸入數字
+    // 最多能夠猜3次
+    // --
+    // 三次內答對，顯示結果如下
+    // 第1次：11
+    // 第2次：99
+    // 答對了
+    // --
+    // 三次內答錯，顯示結果如下
+    // 第1次：11
+    // 第2次：88
+    // 第3次：66
+    // 挑戰失敗
+    // let bingoNum = 99;
+    // for (let i = 3; i > 0; i--)
+    //   bingoNum = prompt('請輸入賓果數字'); {
+    //   if (bingoNum == 99) {
+    //     console.log("答對了");
+    //   } else {
+    //     console.log("挑戰失敗");
+    //   }
+    // }
+
+
+let bingoNum = 99;
+let x = 3;
+
+for (i = 0 ; i < x ; i++ ) {
+  let guess = prompt('請輸入賓果數字');
+
+  if (guess === null) {
+    alert('已取消遊戲！');
+    break;
+  }
+
+  if (parseInt(guess) === bingoNum) { 
+    alert('答對了');
+    break;
+  } else {
+    alert('挑戰失敗');
+  }
+}
+
+if (i === x) {
+  alert('挑戰失敗');
+}
+
+
+
+    // for (let i = 3; i > 1; i--) {
+    //   if (bingoNum != 99) {
+    //     prompt('再輸入一次');
+    //   } else if (bingoNum = 99) {
+    //     window.alert('挑戰成功');
+    //   } else if (bingoNum != 99) {
+    //     window.alert('挑戰失敗');
+    //     break;
+    //   }
+    // }
+
+  </script>
+</body>
+
+</html>

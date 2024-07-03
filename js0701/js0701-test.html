@@ -13,19 +13,7 @@
     //1-100中的 5倍數加總
     //直到合計大於50就結束迴圈
 
-    // console.log('-----for-----')
-    // tot = 0
-    // for (let i = 1; i <= 100; i++) {
-    //   if (i % 5 === 0) {
-    //     tot = tot + i;
-    //     console.log(`i=${i},tot=${tot}`)
-    //     // 檢查toto是否大於50
-    //     if (tot > 50) {
-    //       break; //結束迴圈
-    //     }
-    //   }
-    // }
-//while
+    
     console.log('-----while-----')
     tot = 0;
     let i = 1;
@@ -38,20 +26,25 @@
           break; //結束迴圈
         }
       }
-      i++;
+      i++; /* 不管是否為5的倍數都要+1 */
     }
 
+    console.log('-----dowhile-----')
 
-    document.write('<hr>')
-    // console.log('-----dowhile-----')
-    // let s2 = 5
-    // let i2 = 5
-    // do {
-    //   s2 = s2 + i2;
-    //   i2++;
-
-    //   console.log(`i2=${i2},s2=${s2}`);
-    // } while (i2 <= 100)
+    tot = 0;//沿用for迴圈時的tot變數所以tot=0
+    i = 1; //沿用i變數
+    do {
+      if (i % 5 === 0) {
+        //toto=tot+1;
+        tot += i;
+        console.log(`i=${i},tot=${tot}`);
+        //檢查tot是否大於50
+        if (tot > 50) {
+          break;
+        }
+      }
+      i++;
+    } while (i <= 100);
 
 
   </script>

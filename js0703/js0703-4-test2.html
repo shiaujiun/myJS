@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //輸入成績N次,直到輸入-1或取消結束
+    /* 
+    第1次分數:90
+    第2次分數:50
+    第3次分數:60
+    第4次分數:-1/取消
+    ------------
+    及格人數:2人
+    不及格人數:1人
+    總分:200分
+    總平均:66.67分 
+    */
+
+
+    let count = 0;
+    let pass = 0; //及格
+    let fail = 0; //不及格
+    let tot = 0;//總分
+    let avg = 0;//總平均
+    while (true) {
+      let score = prompt('輸入分數');
+      if (score === '-1' || score == null) {
+        break;
+      }
+      if(isNan(score)){
+        alert('非數值 請重新輸入')
+        continue; // 如果是非數字 則不再往下執行 回到迴圈開始時 重新輸入
+      }
+      score = Number(score);
+      //是否為有效範圍=>0-100
+      if(score<0||score>100){
+        alert('err!分數有效範圍錯誤')
+      }
+      //及格與否
+      if (score >= 60) {
+        pass++;
+      } else {
+        fail++;
+      }
+      tot = tot + score;
+
+
+      count++;
+      document.write(`第${count}次分數:${score}分<br>`);
+    }
+
+
+    document.write(`及格人數:${pass}人<br>`);
+    document.write(`不及格人數:${fail}人<br>`);
+    document.write(`總分:${tot}分<br>`);
+    //總平均計算
+    avg = tot / (pass + fail);
+    avg = avg.toFixed(2);
+    document.write(`總平均:${avg}分<br>`);
+
+    // console.log('結束了')
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let score = prompt('請輸入分數')
+    // document.write(`第${i}次分數:${score}分<br>`)
+
+    // let result = chkScore(score);
+
+    // for (let i = 1; i < 0; i++) {
+    //   if (result == -1) {
+    //     document.write('取消');
+    //     break;
+    //   } else if (result == null) {
+    //     document.write('取消');
+    //     break;
+    //   }
+    // }
+
+
+    // chkScore();
+    //最後呼叫函式
+    // strscore();
+
+
+    // let ans = 'n' //預設沒有答對
+    // for (let i = 1; i <= 3; i++) {
+
+    //   let result = prompt('請輸入數字');
+    //   document.write(`第${i}次:${result}<br>`)
+    //   // 檢查
+    //   if (result == '99') {
+    //     document.write('答對了')
+    //     // ans='y';
+    //     break;
+    //   }
+    // }
+    // if (ans == 'n') {
+    //   document.write('挑戰失敗')
+    // }
+
+
+  </script>
+</body>
+
+</html>

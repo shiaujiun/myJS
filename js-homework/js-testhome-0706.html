@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let money = prompt('輸入金額');
+
+    // if (money >= 100 && money <= 100000) {
+    //   console.log('可以領取')
+    // } else if (money < 100) {
+    //   console.log(money+'無法提取零錢')
+    // } else {
+    //   console.log('超過十萬無法領取')
+    // }
+
+    // 不及格 及格 不能空白 按了取消
+    // let score;
+    // score = prompt('輸入成績');
+    // intscore = Number(score);
+    // 為何要另外宣告intscore?
+
+    // if (score === null) {
+    //   console.log('你按了取消');
+    // } else if (score === '') {
+    //   console.log('不能空白');
+    // } else if (intscore >= 60 && intscore <= 100) {
+    //   console.log('及格');
+    // } else if (intscore >= 0 && intscore < 60) {
+    //   console.log('不及格');
+    // } else if (intscore > 100 || intcore < 0) {
+    //   console.log('非有有效範圍');
+
+    // }
+    // else {
+    //   console.log('errrrrr');
+    // }
+
+    // let money = prompt('輸入金額');
+
+    // if (money<100) {
+    //   console.log('no領取')
+    // } else if (money >= 100000) {
+    //   console.log(ok)
+    // } else {
+    //   console.log('超過10萬無法領取')
+    // }
+
+
+    // let ans = 'n';
+
+    // for (i = 1; i <= 3; i++) {
+    //   let bingoNum = prompt('輸入賓果數字');
+    //   console.log(`第${i}次:${bingoNum}`);
+    //   if (bingoNum == '99') {
+    //     console.log('答對了')
+    //     ans = 'y';
+    //     break;
+    //   }
+    // }
+    // if (ans == 'n') {
+    //   console.log('答錯了');
+    // }
+    let s1 = 0
+    for (let i = 1; i <= 100; i++) {
+      if (i % 5 === 0) {
+        s1 = s1 + i
+        document.write(`s1=${s1}<hr>`);
+        if (s1 > 100) {
+          break;
+        }
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

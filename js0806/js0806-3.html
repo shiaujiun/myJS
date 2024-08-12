@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 事件基本語法 -->
+  <!-- <div 事件名稱="程式碼">標籤內容</div> -->
+  <!-- <button 事件名稱="程式碼">按鈕內容</button> -->
+  <div onclick="changeDiv();">按一下變更內容</div>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque itaque fuga nesciunt modi error sapiente neque
+    a beatae reprehenderit quas illum deserunt ipsam nulla sequi ex temporibus debitis, quasi dignissimos?</p>
+
+    <h2 onclick="">標題</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum reiciendis, consectetur asperiores, deleniti iste aut sequi totam cupiditate expedita quam rerum est soluta accusamus, ducimus magni aperiam necessitatibus aliquid maxime.</p>
+
+  <script>
+    function changeP1() {
+      document.querySelector('p').innerHTML = 'Hello';
+      console.log(document.querySelector('p'));
+      console.log(document.querySelectorAll('p'));
+    }
+    function changeP2{
+      // 取得第二個段落改變段落內容
+      document.getElementsByTagName('p')[1]
+    }
+  </script>
+</body>
+
+</html> 

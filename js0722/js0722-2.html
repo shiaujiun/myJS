@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 建立物件樣板
+    // 習慣物件樣板名稱字首為大寫
+    // 1.建立物件樣版成員(類比成元件概念)
+    function Sdata(no, name, htmlScore, cssScore, jsScore) {
+      this.sid = no;
+      this.sName = name;
+      this.html = htmlScore;
+      this.css = cssScore;
+      this.javascript = jsScore;
+      this.showData = function () {
+        console.log(`${this.sid}同學,總成績為${this.html + this.css + this.javascript}分`);
+      }
+    }
+    // 2.使用物件樣板
+    let s1 = new Sdata('s001', '王小明', 100, 100, 100);
+    // 呼叫物件樣板方法
+    s1.showData();
+
+    let s2 = new Sdata('s002', '張三', 99, 99, 99);
+    s2.showData();
+
+    let s3 = new Sdata('s003', '李四', 98, 98, 98);
+    s3.showData();
+
+    // 計算全班各科總分
+    // 方法一：直接用s1,s2,s3的成員
+    console.log('HTML班級總成績:' = (s1.html + s2.html + s3.html));
+    console.log('CSS班級總成績:' + (s1.css + s2.css + s3.css));
+    console.log('JS班級總成績' + (s1.javascript + s2.javascript + s3.javascript));
+    // 方法二:陣列物件
+    let arrObject = [s1, s2, s3];
+    // console.log(arrObj);
+    let totHtml = 0;
+    let totCss = 0;
+    let totJs = 0;
+    for (let i = 0; i < arrObj.length; i++) {
+      totHtml = totHtml + arrObj[i].html;
+      totCss = totCss + arrObj[i].css;
+      totJs += arrObj[i].javascript;
+    }
+    console.log('HTML總分:' + totHtml)
+    console.log('CSS總分:' + totCss)
+    console.log('JS總分:' + totJs)
+
+
+  </script>
+</body>
+
+</html>

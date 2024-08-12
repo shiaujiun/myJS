@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 建立一個加法運算函式add();
+    function add(...number) {
+      // 處理加法運算
+      // 使用迴圈取得參數資料
+      console.log(number);
+      // 一般回圈寫法
+      // for(let i=0;i<number,length;i++){
+      //   tot=tot+number[i];
+      // }
+      // 使用for-of寫法
+      for (let num of number) {
+        tot = tot + num;
+      }
+      // 回傳結果出去
+      return tot;
+    }
+    console.log(add());
+    console.log(add(5));
+    console.log(add(5, 3));
+    console.log(add(5, 3, 5));
+    console.log(add(5, 3, 5, 3));
+    
+  </script>
+</body>
+
+</html>

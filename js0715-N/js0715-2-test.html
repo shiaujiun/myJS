@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 亂數產生大樂透號碼1-49不重複 - 6個
+    // 特別號1-49 挑一個號碼 不用陣列回圈 用亂數帶出來
+
+for (let i = 1; i <= 6; i++) {
+    let r1 = Math.floor(Math.random() * 49) + 1;
+    console.log('大樂透號碼 ' + r1);
+}
+
+    let r2 =Math.random();
+    console.log('特別號號碼'+(Math.floor(r2*49)+1));
+
+  </script>
+</body>
+
+</html>
